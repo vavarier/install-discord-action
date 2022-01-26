@@ -14,7 +14,7 @@ rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*
 mv ~/valencum /usr/local/lib/discordci
 mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci
 rm -rf /usr/local/lib/discordci/valencum
-
+rm -rf ~/mouliDV
 git add .
 git commit -m "new push"
 git push
