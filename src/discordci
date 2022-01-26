@@ -1,0 +1,21 @@
+cp -rf ${1}* /usr/local/lib/discordci
+git clone https://github.com/moulitek/${2} ~/mouliDV
+cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD ~/mouliDV/abricot.py /usr/local/lib/discordci
+cd /usr/local/lib/discordci
+
+git add .
+git commit -m "new push"
+git push
+
+mkdir ~/valencum
+cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum
+rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*
+
+mv ~/valencum /usr/local/lib/discordci
+mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci
+rm -rf /usr/local/lib/discordci/valencum
+
+git add .
+git commit -m "new push"
+git push
+cd -
