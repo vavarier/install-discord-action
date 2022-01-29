@@ -1,21 +1,99 @@
-cp -rf ${1}* /usr/local/lib/discordci
-git clone https://github.com/moulitek/${2} ~/mouliDV
-cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD ~/mouliDV/abricot.py /usr/local/lib/discordci
-cd /usr/local/lib/discordci
+#!/usr/bin/env python3
+import os
+from sys import *
+import fileinput
+import requests
 
-git add .
-git commit -m "new push"
-git push
+class Colors:
+    OK = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    END = '\033[0m'
 
-mkdir ~/valencum
-cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum
-rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*
 
-mv ~/valencum /usr/local/lib/discordci
-mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci
-rm -rf /usr/local/lib/discordci/valencum
-rm -rf ~/mouliDV
-git add .
-git commit -m "new push"
-git push
-cd -
+
+#help
+def helping():
+    print("give arg pls")
+    exit (0)
+
+#repo
+def set_repo(argv):
+    print("ready to reset the empty github repo")
+    exit (0)
+
+#update
+def update():
+    print("ready to update your discordCI")
+    os.system("git clone https://github.com/vavarier/install-discord-action ~/updatevanouri")
+    os.system("rm -rf /usr/local/bin/discordci")
+    os.system("cp ~/updatevanouri/src/discordci /usr/local/bin")
+    os.system("rm -rf updatevanouri")
+    exit (0)
+
+#weblink
+def set_weblink(argv):
+    print("ready to reset the weblink")
+    exit (0)
+
+def param(command, argv):
+    if (command == "update"):
+        update()
+    if (command == "repo"):
+        set_repo(argv)
+    if (command == "web"):
+        set_weblink(argv)
+
+#parsarg
+def parsarg(command, argv):
+    if(os.path.isdir(command) == False):
+        print("Directory dasn't exist")
+        exit (84)
+    url = "https://github.com/moulitek/"
+    url += argv[2]
+    r = requests.head(url)
+    r = str(r)[11:-2]
+    if (r == str(404)):
+        print("this repo dasn't exist if this an error pls set an issue")
+        exit (84)
+
+#normaluse
+def sending(command, argv):
+    if(command[-1] != '/'):
+        command += '/'
+    #fill the push
+    os.system("cp -rf " + command + "* /usr/local/lib/discordci")
+    os.system("git clone https://github.com/moulitek/" + argv[2] + " ~/mouliDV")
+    os.system("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
+    os.chdir("/usr/local/lib/discordci")
+    os.system("rm -rf ~/mouliDV")
+
+    os.system("ls -a && pwd")
+    #push everything
+    os.system("git add .")
+    os.system("git commit -m new_push")
+    os.system("git push")
+    #clean the repo
+    os.system("mkdir ~/valencum")
+    os.system("cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum")
+    os.system("rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*")
+    #reset the repo
+    os.system("mv ~/valencum /usr/local/lib/discordci")
+    os.system("mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci")
+    os.system("rm -rf /usr/local/lib/discordci/valencum")
+    #push everything
+    os.system("git add .")
+    os.system("git commit -m new_push")
+    os.system("git push")
+
+if (len(argv) <= 1 or len(argv) >= 4):
+    helping()
+command = argv[1]
+
+ref = [["update"], ["repo"], ["web"]]
+for i in range(len(ref)):
+    if (command == str(ref[i])[2:-2]):
+        param(command, argv)
+
+parsarg(command, argv)
+sending(command, argv)
