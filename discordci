@@ -2,6 +2,7 @@
 import os
 from sys import *
 import fileinput
+import requests
 
 class Colors:
     OK = '\033[92m'
@@ -12,7 +13,6 @@ class Colors:
 
 
 #help
-
 def helping():
     print("give arg pls")
     exit (0)
@@ -21,6 +21,7 @@ def helping():
 def set_repo(argv):
     print("ready to reset the empty github repo")
     exit (0)
+
 #update
 def update():
     print("ready to update your discordCI")
@@ -39,15 +40,55 @@ def param(command, argv):
     if (command == "web"):
         set_weblink(argv)
 
-#normaluse
-
 #parsarg
+def parsarg(command, argv):
+    if(os.path.isdir(command) == False):
+        print("Directory dasn't exist")
+        exit (84)
+    url = "https://github.com/moulitek/"
+    url += argv[2]
+    r = requests.head(url)
+    r = str(r)[11:-2]
+    if (r == str(404)):
+        print("this repo dasn't exist if this an error pls set an issue")
+        exit (84)
 
-if (len(argv) <= 1):
+#normaluse
+def sending(command, argv):
+    if(command[-1] != '/'):
+        command += '/'
+    #fill the push
+    os.system("cp -rf " + command + "* /usr/local/lib/discordci")
+    os.system("git clone https://github.com/moulitek/" + argv[2] + " ~/mouliDV")
+    os.system("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
+    os.system("cd /usr/local/lib/discordci")
+    os.system("rm -rf ~/mouliDV")
+    #push everything
+    os.system("git add .")
+    os.system("git commit -m new_push")
+    os.system("git push")
+    #clean the repo
+    os.system("mkdir ~/valencum")
+    os.system("cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum")
+    os.system("rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*")
+    #reset the repo
+    os.system("mv ~/valencum /usr/local/lib/discordci")
+    os.system("mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci")
+    os.system("rm -rf /usr/local/lib/discordci/valencum")
+    #push everything
+    os.system("git add .")
+    os.system("git commit -m new_push")
+    os.system("git push")
+    os.system("cd -")
+
+if (len(argv) <= 1 or len(argv) >= 4):
     helping()
 command = argv[1]
-ref = [["update"], ["repo"], ["web"]]
 
+ref = [["update"], ["repo"], ["web"]]
 for i in range(len(ref)):
     if (command == str(ref[i])[2:-2]):
         param(command, argv)
+
+parsarg(command, argv)
+sending(command, argv)
