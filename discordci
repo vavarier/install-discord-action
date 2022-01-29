@@ -63,6 +63,7 @@ def sending(command, argv):
     os.system("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
     os.system("cd /usr/local/lib/discordci")
     os.system("rm -rf ~/mouliDV")
+    os.system("cd /usr/local/lib/discordci")
     #push everything
     os.system("git add .")
     os.system("git commit -m new_push")
