@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+import os
+from sys import *
+import fileinput
+
+class Colors:
+    OK = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    END = '\033[0m'
+
+
+
+#help
+
+def helping():
+    print("give arg pls")
+    exit (0)
+
+#repo
+def set_repo(argv):
+    print("ready to reset the empty github repo")
+    exit (0)
+#update
+def update():
+    print("ready to update your discordCI")
+    exit (0)
+
+#weblink
+def set_weblink(argv):
+    print("ready to reset the weblink")
+    exit (0)
+
+def param(command, argv):
+    if (command == "update"):
+        update()
+    if (command == "repo"):
+        set_repo(argv)
+    if (command == "web"):
+        set_weblink(argv)
+
+#normaluse
+
+#parsarg
+
+if (len(argv) <= 1):
+    helping()
+command = argv[1]
+ref = [["update"], ["repo"], ["web"]]
+
+for i in range(len(ref)):
+    if (command == str(ref[i])[2:-2]):
+        param(command, argv)
