@@ -26,9 +26,10 @@ def set_repo(argv):
 def update():
     print("ready to update your discordCI")
     os.system("git clone https://github.com/vavarier/install-discord-action ~/updatevanouri")
-    os.system("rm -rf /usr/local/bin/discordci")
-    os.system("cp ~/updatevanouri/src/discordci /usr/local/bin")
-    os.system("rm -rf updatevanouri")
+    os.system("sudo rm -rf /usr/local/bin/discordci")
+    os.system("sudo cp ~/updatevanouri/src/discordci /usr/local/bin")
+    os.system("rm -rf ~/updatevanouri")
+    print(Colors.OK + "Update Done" + Colors.END)
     exit (0)
 
 #weblink
