@@ -42,7 +42,9 @@ def update():
 
 #weblink
 def set_weblink(argv):
-    print("ready to reset the weblink")
+    print("ready to reset the webhook")
+    os.system("echo " + argv[2] + " > /usr/local/lib/discordci/weblink")
+    print(Colors.OK + "Update Done" + Colors.END)
     exit (0)
 
 def param(command, argv):
@@ -76,8 +78,6 @@ def sending(command, argv):
     os.system("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
     os.chdir("/usr/local/lib/discordci")
     os.system("rm -rf ~/mouliDV")
-
-    os.system("ls -a && pwd")
     #push everything
     os.system("git add .")
     os.system("git commit -m new_push")
