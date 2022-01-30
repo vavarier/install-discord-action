@@ -7,23 +7,25 @@ tous les tests fonctionels sont effectués sur l'environnement de la moulinette 
 
 ## Sommaire
 
-1. [Installation](#installation)
-  1. [Créer un répo Git Hub vide privé](##1--créer-un-répo-git-hub-privé)
+1. [Installation](#installation0)
+  1. [Créer un répo Git Hub vide privé](#installation1)
+  2. [Cloner le repo](#installation2)
+  3. [commencer l'intallation](#installation3)
 
-## Installation
+## Installation <a name="installation0"></a>
 
-### 1- Créer un répo Git Hub vide privé
+### 1- Créer un répo Git Hub vide privé <a name="installation1"></a>
 
 Ce répo va permetre au programme d'éffectuer différents git hub actions et de passer le projet au peigne fin avec une norminette.
 
-### 2- cloner le répo Git Hub de discord Ci
+### 2- cloner le répo Git Hub de discord Ci <a name="installation2"></a>
 
 le plus optimal est de cloner le répo dans :
 ```
 /home/[nom d'utilisateur]
 ```
 
-### 3- Commencer l'Installation
+### 3- Commencer l'Installation <a name="installation3"></a>
 
 #### 3.1- exécuter l'installer dans le dossier cloner
 
