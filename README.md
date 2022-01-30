@@ -9,8 +9,8 @@ tous les tests fonctionels sont effectués sur l'environnement de la moulinette 
 
 1. [Installation](#installation0)
 	1. [Créer un répo Git Hub vide privé](#installation1)
-    	2. [Cloner le repo](#installation2)
-    	3. [commencer l'intallation](#installation3)
+	2. [Cloner le repo](#installation2)
+	3. [commencer l'intallation](#installation3)
 
 ## Installation <a name="installation0"></a>
 
