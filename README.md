@@ -8,7 +8,7 @@ tous les tests fonctionels sont effectués sur l'environnement de la moulinette 
 ## Sommaire
 
 1. [Installation](#installation)
-1.1 [Créer un répo Git Hub vide privé](#créer un répo git hub privé)
+*1.1 [Créer un répo Git Hub vide privé](#créer un répo git hub privé)
 
 ## Installation
 
