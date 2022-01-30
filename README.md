@@ -28,6 +28,6 @@ pour cela rentrez dans le repo et effectuez cette commande :
 
 Add badges from somewhere like: [shields.io](https://shields.io/)
 
-[![chat test](https://github.com/ZiplEix/install-discord-action/blob/main/chat.jpg)](https://github.com/ZiplEix/install-discord-action)
+[![chat test](https://github.com/ZiplEix/install-discord-action/blob/main/chat.jpg)](https://youtube.com)
 [![deux test](https://commons.wikimedia.org/wiki/File:Collage_of_Six_Cats-02.jpg?uselang=fr)](https://github.com/ZiplEix/install-discord-action)
 
