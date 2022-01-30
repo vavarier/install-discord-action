@@ -1,33 +1,49 @@
-
-# Discord Ci
-
-Discord Ci est un outil pour les projet EPITECH permettant de lancer une norminette et des tests fonctionels sur n'importe quel projet déjàs implémentés.
-Les résultats des tests fonctionels et de la norminettes sont envoyés sur discord.
-tous les tests fonctionels sont effectués sur l'environnement de la moulinette EPITECH.
-
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Collaboration](#collaboration)
+5. [FAQs](#faqs)
+### General Info
+***
+Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+### Screenshot
+![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+## Technologies
+***
+A list of technologies used within the project:
+* [Technologie name](https://example.com): Version 12.3 
+* [Technologie name](https://example.com): Version 2.34
+* [Library name](https://example.com): Version 1234
 ## Installation
-
-### 1- Créer un répo Git Hub vide privé
-
-Ce répo va permetre au programme d'éffectuer différents git hub actions et de passer le projet au peigne fin avec une norminette.
-
-### 2- cloner le répo Git Hub de discord Ci
-
-le plus optimal est de cloner le répo dans :
+***
+A little intro about the installation. 
 ```
-/home/[nom d'utilisateur]
+$ git clone https://example.com
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
 ```
-
-### 3- exécuter l'installer dans le dossier cloner
-
-pour cela rentrez dans le repo et effectuez cette commande :
-```bash
-./install.sh
-```
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
-[![chat test](https://github.com/ZiplEix/install-discord-action/blob/main/chat.jpg)](https://youtube.com)
-[![deux test](https://commons.wikimedia.org/wiki/File:Collage_of_Six_Cats-02.jpg?uselang=fr)](https://github.com/ZiplEix/install-discord-action)
-
+Side information: To use the application in a special environment use ```lorem ipsum``` to start
+## Collaboration
+***
+Give instructions on how to collaborate with your project.
+> Maybe you want to write a quote in this part. 
+> It should go over several rows?
+> This is how you do it.
+## FAQs
+***
+A list of frequently asked questions
+1. **This is a question in bold**
+Answer of the first question with _italic words_. 
+2. __Second question in bold__ 
+To answer this question we use an unordered list:
+* First point
+* Second Point
+* Third point
+3. **Third question in bold**
+Answer of the third question with *italic words*.
+4. **Fourth question in bold**
+| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
+|:--------------|:-------------:|--------------:|
+| text-align left | text-align center | text-align right |
