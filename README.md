@@ -69,27 +69,27 @@ lorsque ce message apparaitra :
 
 ## Utilisation <a name="utilisation"></a>
 
-### ``discordci``
+### ```discordci```
 
 > Affiche l'aide.
 
-### ``discordci update``
+### ```discordci update```
 
 > télécharge et install la derniere version de Discord Ci*
 
-### ``discordci web [webhook link]``
+### ```discordci web [webhook link]```
 
 > Parmet de changer le salon discord dans lequel Discord Ci envoi le compte rendu
 
-### ``discordci repo [Git Hub SSH link]``
+### ```discordci repo [Git Hub SSH link]```
 
 > Permet de changer le répo Git Hub utilisé par Discord Ci
 
-### ``discordci [path to the folder] [name of the project]``
+### ```discordci [path to the folder] [name of the project]```
 
 > Permet de lancer une mouli sur votre projet
 
-### ``discordci [path to the folder] norm``
+### ```discordci [path to the folder] norm```
 
 > Permet de n'appliquer que la norme
 
