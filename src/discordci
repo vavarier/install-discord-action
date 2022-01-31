@@ -14,7 +14,13 @@ class Colors:
 
 #help
 def helping():
-    print("give arg pls")
+    print("Error in argument")
+    print("    discordci                                             -> print help")
+    print("    discordci update                                      -> update your bin")
+    print("    discordci web [webhook link]                          -> change your webhook")
+    print("    discordci repo [github ssh link]                      -> change the link of your empty repository")
+    print("    discordci [path to the repo] [name of the project]    -> lauch mouli on your project")
+    print("    discordci [path to the repo] norm                     -> only apply norm and your repo")
     exit (0)
 
 #repo

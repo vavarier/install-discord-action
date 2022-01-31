@@ -27,9 +27,7 @@ while read line; do
     break
 done
 
-tput setaf 2
 echo "=> Creating repository..."
-tput sgr0
 git clone $link discordci
 sudo mv discordci /usr/local/lib
 sudo echo $discord > /usr/local/lib/discordci/weblink
