@@ -124,3 +124,5 @@ lorsque ce message apparaitra :
 ![linkeding bage](https://img.shields.io/badge/-linkedind-0A66C2?logo=linkedin&style=for-the-badge)
 ![git hub bage](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&style=for-the-badge)
 ![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)
+
+[![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)](baptiste.leroyer@epitech.eu)
