@@ -1,5 +1,5 @@
 
-# Discord Ci
+# Discord Ci ![issue](https://img.shields.io/github/issues/vavarier/install-discord-action?label=Discordci%20issue%27s&style=for-the-badge)
 
 Discord Ci est un outil pour les projet EPITECH permettant de lancer une norminette et des tests fonctionels sur n'importe quel projet déjàs implémentés.
 Les résultats des tests fonctionels et de la norminettes sont envoyés sur discord.
