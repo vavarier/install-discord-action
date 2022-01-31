@@ -97,23 +97,23 @@ lorsque ce message apparaitra :
 
 ### Flag et discord report <a name="output1"></a>
 
-![green_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/green_discord_report.png)
+![green_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/green_discord_report_resized.png)
 
 ![issue](https://img.shields.io/badge/mouli-success-light--green?style=for-the-badge&logo=Cachet)
 > tous les test on été passé et pas d'erreur de norme
 
-![yellow_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/yellow_discord_report.png)
+![yellow_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/yellow_discord_report_resized.png)
 
 ![issue](https://img.shields.io/badge/mouli-norm%20error-ffff00?style=for-the-badge&logo=Swagger)
 > Les tests et la compilation on été passé mais le projet contient des erreurs de norme
 
-![orange_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/orange_discord_report.png)
+![orange_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/orange_discord_report_resized.png)
 
 ![issue](https://img.shields.io/badge/mouli-test%20error-ff7f00?style=for-the-badge&logo=Speedtest)
 > les tests ne sont pas passé mais la compilation passe
 > Ne prend pas en compte la norme
 
-![red_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/red_discord_report.png)
+![red_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/red_discord_report_resized.png)
 
 ![issue](https://img.shields.io/badge/mouli-build%20error-ff0000?style=for-the-badge&logo=ZeroMQ)
 > La compilation ne marche pas.
