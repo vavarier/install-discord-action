@@ -125,4 +125,4 @@ lorsque ce message apparaitra :
 ![git hub bage](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&style=for-the-badge)
 ![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)
 
-[![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)](baptiste.leroyer@epitech.eu)
+[![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)](https://outlook.office365.com/mail/inbox/id/AAQkADBlMWRmNGYyLTQ3N2MtNDNjNC04ZjUzLTJiNjdhMjA4ZGQ1NwAQAFE8SAxE6vZPq7Iz3olDxZc%3D)
