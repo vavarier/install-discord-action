@@ -11,6 +11,11 @@ tous les tests fonctionels sont effectués sur l'environnement de la moulinette 
 	1. [Créer un répo Git Hub vide privé](#installation1)
 	2. [Cloner le repo](#installation2)
 	3. [commencer l'intallation](#installation3)
+2. [Utilisation](#utilisation)
+3. [Outout](#output)
+    1. [flags et discord report](#output1)
+    2. [Trace](#output2)
+
 ## Installation <a name="installation0"></a>
 
 ### 1- Créer un répo Git Hub vide privé <a name="installation1"></a>
@@ -61,3 +66,53 @@ lorsque ce message apparaitra :
 écrivez le lien du webhook créer dans l'étape précedente.
 
 #### voila vous avez installer et setup Discord Ci
+
+## Utilisation <a name="utilisation"></a>
+
+### ``discordci``
+
+> Affiche l'aide.
+
+### ``discordci update``
+
+> télécharge et install la derniere version de Discord Ci*
+
+### ``discordci web [webhook link]``
+
+> Parmet de changer le salon discord dans lequel Discord Ci envoi le compte rendu
+
+### ``discordci repo [Git Hub SSH link]``
+
+> Permet de changer le répo Git Hub utilisé par Discord Ci
+
+### ``discordci [path to the folder] [name of the project]``
+
+> Permet de lancer une mouli sur votre projet
+
+### ``discordci [path to the folder] norm``
+
+> Permet de n'appliquer que la norme
+
+## Output <a name="output"></a>
+
+### Flag et discord report <a name="output1"></a>
+
+![green_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/green_discord_report.png)
+![issue](https://img.shields.io/badge/mouli-success-light--green?style=for-the-badge&logo=Cachet)
+> tous les test on été passé et pas d'erreur de norme
+
+![yellow_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/yellow_discord_report.png)
+![issue](https://img.shields.io/badge/mouli-norm%20error-ffff00?style=for-the-badge&logo=Swagger)
+> Les tests et la compilation on été passé mais le projet contient des erreurs de norme
+
+![orange_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/orange_discord_report.png)
+![issue](https://img.shields.io/badge/mouli-test%20error-ff7f00?style=for-the-badge&logo=Speedtest)
+> les tests ne sont pas passé mais la compilation passe
+> Ne prend pas en compte la norme
+
+![red_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/red_discord_report.png)
+![issue](https://img.shields.io/badge/mouli-build%20error-ff0000?style=for-the-badge&logo=ZeroMQ)
+> La compilation ne marche pas.
+> ne prend pas en compte la norme
+
+### Trace <a name="output2"></a>
