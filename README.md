@@ -69,10 +69,7 @@ lorsque ce message apparaitra :
 
 ## Utilisation <a name="utilisation"></a>
 
-### 
-```
-discordci
-```
+### ```discordci```
 
 > Affiche l'aide.
 
