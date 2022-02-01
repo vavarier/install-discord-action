@@ -15,6 +15,7 @@ tous les tests fonctionels sont effectués sur l'environnement de la moulinette 
 3. [Outout](#output)
     1. [flags et discord report](#output1)
     2. [Trace](#output2)
+4. [Crédis](#credis)
 
 ## Installation <a name="installation0"></a>
 
@@ -54,7 +55,7 @@ _exemple_ _clef_ _ssh_ _:_
 
 pour que discord Ci vous envoi les résultats de ses tests vous aller de voir lui indiquer l'endroit dans discord dans lesquel vous voulez votre récapitulatif.
 
-pour cela il vous faudrat créer un [webhook](https://support.discord.com/hc/fr/articles/228383668-Utiliser-les-Webhooks) dans discord
+pour cela il vous faudrat créer un **[webhook]**(https://support.discord.com/hc/fr/articles/228383668-Utiliser-les-Webhooks) dans discord
 
 #### 3.3- Renseigner l'adresse du webhook
 
@@ -97,20 +98,20 @@ lorsque ce message apparaitra :
 
 ### Flag et discord report <a name="output1"></a>
 
-![green_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/green_discord_report.png)
+![green_discord_report](https://github.com/vavarier/install-discord-action/blob/main/readme-src/green_discord_report.png)
 ![issue](https://img.shields.io/badge/mouli-success-light--green?style=for-the-badge&logo=Cachet)
 > tous les test on été passé et pas d'erreur de norme
 
-![yellow_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/yellow_discord_report.png)
+![yellow_discord_report](https://github.com/vavarier/install-discord-action/blob/main/readme-src/yellow_discord_report.png)
 ![issue](https://img.shields.io/badge/mouli-norm%20error-ffff00?style=for-the-badge&logo=Swagger)
 > Les tests et la compilation on été passé mais le projet contient des erreurs de norme
 
-![orange_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/orange_discord_report.png)
+![orange_discord_report](https://github.com/vavarier/install-discord-action/blob/main/readme-src/orange_discord_report.png)
 ![issue](https://img.shields.io/badge/mouli-test%20error-ff7f00?style=for-the-badge&logo=Speedtest)
 > les tests ne sont pas passé mais la compilation passe
 > Ne prend pas en compte la norme
 
-![red_discord_report](https://github.com/ZiplEix/install-discord-action/blob/main/readme-src/red_discord_report.png)
+![red_discord_report](https://github.com/vavarier/install-discord-action/blob/main/readme-src/red_discord_report.png)
 ![issue](https://img.shields.io/badge/mouli-build%20error-ff0000?style=for-the-badge&logo=ZeroMQ)
 > La compilation ne marche pas.
 > ne prend pas en compte la norme
@@ -121,7 +122,7 @@ Le flag et le discord report viennent avec une trace sous le nom de ``trace.md``
 Cette trace permet de voir en profondeur les erreurs de normes, les erreurs de compilation ou bien les tests qui ont échoués.
 
 
-## Crédis
+## Crédis <a name="credis"></a>
 
 ### Conception / programmation
 
