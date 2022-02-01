@@ -141,8 +141,3 @@ Baptiste Leroyer :
 [![linkeding bage](https://img.shields.io/badge/-linkedind-0A66C2?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/baptiste-leroyer-a69894227/)
 [![git hub bage](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&style=for-the-badge)](https://github.com/ZiplEix)
 [![mail](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)](mailto:baptiste.leroyer@epitech.eu)
-![linkeding bage](https://img.shields.io/badge/-linkedind-0A66C2?logo=linkedin&style=for-the-badge)
-![git hub bage](https://img.shields.io/badge/-GitHub-181717?logo=GitHub&style=for-the-badge)
-![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)
-
-[![git hub bage](https://img.shields.io/badge/-Mail-0078D4?logo=Microsoft-Outlook&style=for-the-badge)](https://outlook.office365.com/mail/inbox/id/AAQkADBlMWRmNGYyLTQ3N2MtNDNjNC04ZjUzLTJiNjdhMjA4ZGQ1NwAQAFE8SAxE6vZPq7Iz3olDxZc%3D)
