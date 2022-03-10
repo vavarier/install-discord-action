@@ -3,19 +3,13 @@ import os
 from sys import *
 import fileinput
 import requests
-import subprocess
+
 class Colors:
     OK = '\033[92m'
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     END = '\033[0m'
 
-
-def popen(cmd):
-    process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    out, err = process.communicate()
-    if err:
-        print ("error occur with error : ", err.decode())
 
 
 #help
@@ -34,11 +28,11 @@ def set_repo(argv):
     if (len(argv) != 3):
         helping()
     print("ready to reset the empty github repo")
-    popen("sudo mv /usr/local/lib/discordci/weblink ~/")
-    popen("sudo rm -rf /usr/local/lib/discordci")
+    os.system("sudo mv /usr/local/lib/discordci/weblink ~/")
+    os.system("sudo rm -rf /usr/local/lib/discordci")
     os.system("git clone " + argv[2] + " ~/discordci")
-    popen("sudo mv ~/discordci /usr/local/lib/")
-    popen("sudo mv ~/weblink /usr/local/lib/discordci/")
+    os.system("sudo mv ~/discordci /usr/local/lib/")
+    os.system("sudo mv ~/weblink /usr/local/lib/discordci/")
     print(Colors.OK + "Update Done" + Colors.END)
     exit (0)
 
@@ -46,16 +40,16 @@ def set_repo(argv):
 def update():
     print("ready to update your discordCI")
     os.system("git clone https://github.com/vavarier/install-discord-action ~/updatevanouri")
-    popen("sudo rm -rf /usr/local/bin/discordci")
-    popen("sudo cp ~/updatevanouri/src/discordci /usr/local/bin")
-    popen("rm -rf ~/updatevanouri")
+    os.system("sudo rm -rf /usr/local/bin/discordci")
+    os.system("sudo cp ~/updatevanouri/src/discordci /usr/local/bin")
+    os.system("rm -rf ~/updatevanouri")
     print(Colors.OK + "Update Done" + Colors.END)
     exit (0)
 
 #weblink
 def set_weblink(argv):
     print("ready to reset the webhook")
-    popen("echo " + argv[2] + " > /usr/local/lib/discordci/weblink")
+    os.system("echo " + argv[2] + " > /usr/local/lib/discordci/weblink")
     print(Colors.OK + "Update Done" + Colors.END)
     exit (0)
 
@@ -73,8 +67,6 @@ def parsarg(command, argv):
         print("Directory dasn't exist")
         exit (84)
     url = "https://github.com/moulitek/"
-    if (len(argv) <= 2):
-        helping()
     url += argv[2]
     r = requests.head(url)
     r = str(r)[11:-2]
@@ -87,23 +79,23 @@ def sending(command, argv):
     if(command[-1] != '/'):
         command += '/'
     #fill the push
-    popen("sudo cp -rf " + command + "* /usr/local/lib/discordci")
+    os.system("cp -rf " + command + "* /usr/local/lib/discordci")
     os.system("git clone https://github.com/moulitek/" + argv[2] + " ~/mouliDV")
-    popen("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
+    os.system("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
     os.chdir("/usr/local/lib/discordci")
-    popen("sudo rm -rf ~/mouliDV")
+    os.system("rm -rf ~/mouliDV")
     #push everything
     os.system("git add .")
     os.system("git commit -m new_push")
     os.system("git push")
     #clean the repo
-    popen("mkdir ~/valencum")
-    popen("sudo cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum")
-    popen("sudo rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*")
+    os.system("mkdir ~/valencum")
+    os.system("cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum")
+    os.system("rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*")
     #reset the repo
-    popen("sudo mv ~/valencum /usr/local/lib/discordci")
-    popen("sudo mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci")
-    popen("sudo rm -rf /usr/local/lib/discordci/valencum")
+    os.system("mv ~/valencum /usr/local/lib/discordci")
+    os.system("mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci")
+    os.system("rm -rf /usr/local/lib/discordci/valencum")
     #push everything
     os.system("git add .")
     os.system("git commit -m new_push")
