@@ -16,7 +16,6 @@ def popen(cmd):
     out, err = process.communicate()
     if err:
         print ("error occur with error : ", err.decode())
-        exit (84)
 
 
 #help
@@ -74,6 +73,8 @@ def parsarg(command, argv):
         print("Directory dasn't exist")
         exit (84)
     url = "https://github.com/moulitek/"
+    if (len(argv) <= 2):
+        helping()
     url += argv[2]
     r = requests.head(url)
     r = str(r)[11:-2]
@@ -86,23 +87,23 @@ def sending(command, argv):
     if(command[-1] != '/'):
         command += '/'
     #fill the push
-    popen("cp -rf " + command + "* /usr/local/lib/discordci")
+    popen("sudo cp -rf " + command + "* /usr/local/lib/discordci")
     os.system("git clone https://github.com/moulitek/" + argv[2] + " ~/mouliDV")
     popen("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
     os.chdir("/usr/local/lib/discordci")
-    popen("rm -rf ~/mouliDV")
+    popen("sudo rm -rf ~/mouliDV")
     #push everything
     os.system("git add .")
     os.system("git commit -m new_push")
     os.system("git push")
     #clean the repo
     popen("mkdir ~/valencum")
-    popen("cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum")
-    popen("rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*")
+    popen("sudo cp -rf /usr/local/lib/discordci/.git /usr/local/lib/discordci/weblink ~/valencum")
+    popen("sudo rm -rf /usr/local/lib/discordci/* /usr/local/lib/discordci/.*")
     #reset the repo
-    popen("mv ~/valencum /usr/local/lib/discordci")
-    popen("mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci")
-    popen("rm -rf /usr/local/lib/discordci/valencum")
+    popen("sudo mv ~/valencum /usr/local/lib/discordci")
+    popen("sudo mv /usr/local/lib/discordci/valencum/.git /usr/local/lib/discordci/valencum/weblink /usr/local/lib/discordci")
+    popen("sudo rm -rf /usr/local/lib/discordci/valencum")
     #push everything
     os.system("git add .")
     os.system("git commit -m new_push")
