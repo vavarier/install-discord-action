@@ -16,7 +16,7 @@ def popen(cmd):
     out, err = process.communicate()
     if err:
         print ("error occur with error : ", err.decode())
-        exit 84
+        exit (84)
 
 
 #help
