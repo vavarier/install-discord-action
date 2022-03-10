@@ -79,7 +79,7 @@ def sending(command, argv):
     if(command[-1] != '/'):
         command += '/'
     #fill the push
-    os.system("cp -rf " + command + "* /usr/local/lib/discordci")
+    os.system("cp -rf " + command + "* " + command + ".gitignore /usr/local/lib/discordci")
     os.system("git clone https://github.com/moulitek/" + argv[2] + " ~/mouliDV")
     os.system("cp -rf ~/mouliDV/.github ~/mouliDV/mouliVD /usr/local/lib/discordci")
     os.chdir("/usr/local/lib/discordci")
